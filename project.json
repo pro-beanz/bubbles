@@ -1,0 +1,97 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Just a little rewrite of Play_Nick's Dunked wallpaper (can be found here https://steamcommunity.com/sharedfiles/filedetails/?id=1332003658). This was hardcoded to have my preferred configuration, so if you'd like clock customization, please download the original version. I added some new features like free color selection and a rainbow coloring algorithm. Also, it doesn't have the system resource usage issues of the original.\n\nThis was originally a personal project/learning experience, but I decided to upload it publicly. Leave a comment if you have feedback! There's no guarantee I'll implement new features, but suggestions will be taken into consideration.",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"bubbleCount" : 
+			{
+				"fraction" : false,
+				"index" : 5,
+				"max" : 300,
+				"min" : 0,
+				"order" : 105,
+				"text" : "Bubble Count",
+				"type" : "slider",
+				"value" : 150
+			},
+			"color" : 
+			{
+				"condition" : "rainbow.value == false",
+				"index" : 3,
+				"order" : 103,
+				"text" : "Color",
+				"type" : "color",
+				"value" : "0.4980392156862745 0.2784313725490196 1"
+			},
+			"cursor" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "Mouse Interaction",
+				"type" : "bool",
+				"value" : true
+			},
+			"hueShiftSpeed" : 
+			{
+				"condition" : "rainbow.value == true",
+				"fraction" : false,
+				"index" : 1,
+				"max" : 15,
+				"min" : -15,
+				"order" : 101,
+				"precision" : 1,
+				"text" : "Hue Shift Speed",
+				"type" : "slider",
+				"value" : 1
+			},
+			"rainbow" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Rainbow",
+				"type" : "bool",
+				"value" : false
+			},
+			"rainbow2" : 
+			{
+				"condition" : "rainbow.value == true",
+				"index" : 2,
+				"order" : 102,
+				"text" : "Rainbow 2.0",
+				"type" : "bool",
+				"value" : false
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.42745098039215684 0.4196078431372549 0.41568627450980394"
+			},
+			"speed" : 
+			{
+				"fraction" : true,
+				"index" : 4,
+				"max" : 10,
+				"min" : 0,
+				"order" : 104,
+				"precision" : 2,
+				"step" : 0.10000000000000001,
+				"text" : "Speed",
+				"type" : "slider",
+				"value" : 1
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Abstract" ],
+	"title" : "Bubbles",
+	"type" : "web",
+	"version" : 4,
+	"visibility" : "public",
+	"workshopid" : "2462702237",
+	"workshopurl" : "steam://url/CommunityFilePage/2462702237"
+}
