@@ -102,6 +102,7 @@ function render() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     cursorRadius = 0.25 * canvas.height;
+    borderWidth = 0.01 * canvas.width;
     window.addEventListener('resize', render, true);
 }
 
@@ -160,12 +161,17 @@ function oneOrZero() { return Math.random() > 0.5 ? 1 : 0 }
 
 document.onmousemove = updateMousePos;
 function updateMousePos(event) {
-    mouseX = event.pageX;
-    mouseY = event.pageY;
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    if (mouseX <= borderWidth || mouseX >= canvas.width - borderWidth || mouseY <= borderWidth || mouseY >= canvas.height - borderWidth) {
+        mouseX = -cursorRadius;
+        mouseY = -cursorRadius;
+    }
 }
 
 let mouseX = -cursorRadius,
     mouseY = -cursorRadius;
+    borderWidth = 0.025 * canvas.width;
 
 canvas.addEventListener("mouseleave", function (event) {
     if (event.clientY <= 0 || event.clientX <= 0 ||
