@@ -1,4 +1,7 @@
-const clock = document.getElementById('clock'),
+let running = true;
+
+const clock_section = document.getElementById('clock_section'),
+    date_section = document.getElementById('date_section'),
     hour_10s = document.getElementById('hour_10s'),
     hour_1s = document.getElementById('hour_1s'),
     minute_10s = document.getElementById('minute_10s'),
@@ -15,7 +18,7 @@ let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
     weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 function Clock() {
-    requestAnimationFrame(() => Clock());
+    if (running) requestAnimationFrame(() => Clock());
     let currentTime = new Date();
     let currentHour = currentTime.getHours(),
         currentMinute = currentTime.getMinutes(),
@@ -34,19 +37,19 @@ function Clock() {
     if (currentHour < 10) {
         currentHour = '0' + currentHour;
     }
-    
+
     if (currentMinute < 10) {
         currentMinute = '0' + currentMinute;
     }
-    
+
     if (currentSecond < 10) {
         currentSecond = '0' + currentSecond;
     }
-    
+
     if (currentDate < 10) {
         currentDate = '0' + currentDate;
     }
-    
+
     hour_10s.innerHTML = Math.floor(currentHour / 10);
     hour_1s.innerHTML = currentHour % 10;
     minute_10s.innerHTML = Math.floor(currentMinute / 10);
@@ -58,5 +61,21 @@ function Clock() {
     month.innerHTML = months[currentMonth];
     year.innerHTML = currentYear;
 }
+
+
+// property updates
+
+document.addEventListener("clockEnabled", (v) => {
+    running = v.detail.value;
+    let visiblity;
+    if (running) {
+        Clock();
+        visiblity = "visible";
+    } else {
+        visiblity = "hidden";
+    }
+    clock_section.style.visibility = visiblity;
+    date_section.style.visibility = visiblity;
+});
 
 Clock();

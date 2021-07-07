@@ -9,27 +9,35 @@
 			"bubbleCount" : 
 			{
 				"fraction" : false,
-				"index" : 5,
+				"index" : 6,
 				"max" : 300,
 				"min" : 0,
-				"order" : 105,
+				"order" : 106,
 				"text" : "Bubble Count",
 				"type" : "slider",
 				"value" : 150
 			},
+			"clockEnabled" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Enable Clock",
+				"type" : "bool",
+				"value" : true
+			},
 			"color" : 
 			{
 				"condition" : "rainbow.value == false",
-				"index" : 3,
-				"order" : 103,
+				"index" : 4,
+				"order" : 104,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "0.4980392156862745 0.2784313725490196 1"
 			},
 			"cursor" : 
 			{
-				"index" : 6,
-				"order" : 106,
+				"index" : 7,
+				"order" : 107,
 				"text" : "Mouse Interaction",
 				"type" : "bool",
 				"value" : true
@@ -38,10 +46,10 @@
 			{
 				"condition" : "rainbow.value == true",
 				"fraction" : false,
-				"index" : 1,
+				"index" : 2,
 				"max" : 15,
 				"min" : -15,
-				"order" : 101,
+				"order" : 102,
 				"precision" : 1,
 				"text" : "Hue Shift Speed",
 				"type" : "slider",
@@ -49,8 +57,8 @@
 			},
 			"rainbow" : 
 			{
-				"index" : 0,
-				"order" : 100,
+				"index" : 1,
+				"order" : 101,
 				"text" : "Rainbow",
 				"type" : "bool",
 				"value" : false
@@ -58,8 +66,8 @@
 			"rainbow2" : 
 			{
 				"condition" : "rainbow.value == true",
-				"index" : 2,
-				"order" : 102,
+				"index" : 3,
+				"order" : 103,
 				"text" : "Rainbow 2.0",
 				"type" : "bool",
 				"value" : false
@@ -74,10 +82,10 @@
 			"speed" : 
 			{
 				"fraction" : true,
-				"index" : 4,
+				"index" : 5,
 				"max" : 10,
 				"min" : 0,
-				"order" : 104,
+				"order" : 105,
 				"precision" : 2,
 				"step" : 0.10000000000000001,
 				"text" : "Speed",
@@ -89,7 +97,7 @@
 	"preview" : "preview.jpg",
 	"tags" : [ "Abstract" ],
 	"title" : "Bubbles",
-	"type" : "web",
+	"type" : "Web",
 	"version" : 4,
 	"visibility" : "public",
 	"workshopid" : "2462702237",
