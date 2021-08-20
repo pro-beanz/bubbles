@@ -1,12 +1,21 @@
 body {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=);
+  background-color: #222;
+  background-repeat: repeat;
+  background-size: 7px;
   padding: 0;
   margin: 0;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   font-family: 'Orbitron-Regular';
+}
+
+body::before {
+  filter: blur(1px);
 }
 
 #date_section, #clock_section {
