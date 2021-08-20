@@ -1,6 +1,6 @@
 {
 	"contentrating" : "Everyone",
-	"description" : "Just a little rewrite of Play_Nick's Dunked wallpaper (can be found here https://steamcommunity.com/sharedfiles/filedetails/?id=1332003658). This was hardcoded to have my preferred configuration, so if you'd like clock customization, please download the original version. I added some new features like free color selection and a rainbow coloring algorithm. Also, it doesn't have the system resource usage issues of the original.\n\nThis was originally a personal project/learning experience, but I decided to upload it publicly. Leave a comment if you have feedback! There's no guarantee I'll implement new features, but suggestions will be taken into consideration.",
+	"description" : "Just a little rewrite of Play_Nick's Dunked wallpaper (can be found here https://steamcommunity.com/sharedfiles/filedetails/?id=1332003658). This was hardcoded to have my preferred configuration, so if you'd like clock customization, please download the original version. I added some new features like free color selection and a rainbow coloring algorithm. Also, it doesn't have the system resource usage issues of the original.\r\n\r\nThis was originally a personal project/learning experience, but I decided to upload it publicly. Leave a comment if you have feedback! There's no guarantee I'll implement new features, but suggestions will be taken into consideration.\r\n\r\nGithub project page: https://github.com/pro-beanz/bubbles",
 	"file" : "index.html",
 	"general" : 
 	{
@@ -9,10 +9,10 @@
 			"bubbleCount" : 
 			{
 				"fraction" : false,
-				"index" : 6,
+				"index" : 7,
 				"max" : 300,
 				"min" : 0,
-				"order" : 106,
+				"order" : 107,
 				"text" : "Bubble Count",
 				"type" : "slider",
 				"value" : 150
@@ -28,16 +28,16 @@
 			"color" : 
 			{
 				"condition" : "rainbow.value == false",
-				"index" : 4,
-				"order" : 104,
+				"index" : 5,
+				"order" : 105,
 				"text" : "Color",
 				"type" : "color",
 				"value" : "0.4980392156862745 0.2784313725490196 1"
 			},
 			"cursor" : 
 			{
-				"index" : 7,
-				"order" : 107,
+				"index" : 8,
+				"order" : 108,
 				"text" : "Mouse Interaction",
 				"type" : "bool",
 				"value" : true
@@ -46,10 +46,10 @@
 			{
 				"condition" : "rainbow.value == true",
 				"fraction" : false,
-				"index" : 2,
+				"index" : 3,
 				"max" : 15,
 				"min" : -15,
-				"order" : 102,
+				"order" : 103,
 				"precision" : 1,
 				"text" : "Hue Shift Speed",
 				"type" : "slider",
@@ -66,11 +66,25 @@
 			"rainbow2" : 
 			{
 				"condition" : "rainbow.value == true",
-				"index" : 3,
-				"order" : 103,
+				"index" : 2,
+				"order" : 102,
 				"text" : "Rainbow 2.0",
 				"type" : "bool",
 				"value" : false
+			},
+			"rainbowOffset" : 
+			{
+				"condition" : "rainbow.value == true",
+				"fraction" : true,
+				"index" : 4,
+				"max" : 45,
+				"min" : -45,
+				"order" : 104,
+				"precision" : 3,
+				"step" : 0.10000000000000001,
+				"text" : "Rainbow Offset",
+				"type" : "slider",
+				"value" : 0
 			},
 			"schemecolor" : 
 			{
@@ -82,10 +96,10 @@
 			"speed" : 
 			{
 				"fraction" : true,
-				"index" : 5,
+				"index" : 6,
 				"max" : 10,
 				"min" : 0,
-				"order" : 105,
+				"order" : 106,
 				"precision" : 2,
 				"step" : 0.10000000000000001,
 				"text" : "Speed",
@@ -97,8 +111,8 @@
 	"preview" : "preview.jpg",
 	"tags" : [ "Abstract" ],
 	"title" : "Bubbles",
-	"type" : "Web",
-	"version" : 4,
+	"type" : "web",
+	"version" : 6,
 	"visibility" : "public",
 	"workshopid" : "2462702237",
 	"workshopurl" : "steam://url/CommunityFilePage/2462702237"
