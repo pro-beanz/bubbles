@@ -5,7 +5,6 @@ let bubbles = [];
 let rainbow = false;
 let hueShiftSpeed = 1;
 let rainbow2 = false;
-let rainbowOffset = 0;
 let colors = [
     [255, 255, 255],
     [19, 19, 19],
@@ -79,7 +78,7 @@ class Bubble {
             angle = ((new Date().getTime() / 8 * hueShiftSpeed - this.xPos + this.yPos) / 4096);
         }
 
-        let color = [360 + Math.sin((angle + rainbowOffset) % (Math.PI / 2)) * -360, 65, 50];
+        let color = [360 + Math.sin((angle) % (Math.PI / 2)) * -360, 65, 50];
         return "hsla(" + color[0] + "," + color[1] + "%," + color[2] + "%," + this.opacity + ")";
     }
 
@@ -197,8 +196,6 @@ document.addEventListener("rainbow2", (v) => {
     rainbow2 = v.detail.value;
     bubbles.forEach(bubble => { bubble.updateColor(); });
 });
-
-document.addEventListener("rainbowOffset", (v) => { rainbowOffset = v.detail.value * Math.PI / 180 });
 
 document.addEventListener("speed", (v) => { speedFactor = v.detail.value });
 
