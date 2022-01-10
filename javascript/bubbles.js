@@ -13,6 +13,7 @@ let colors = [
 ]
 let speedFactor = 1;
 let cursorInteraction = true;
+let ratio;
 
 class Bubble {
     constructor() {
@@ -32,7 +33,7 @@ class Bubble {
         this.radius = randRange(0.00694 * canvas.height, 0.02431 * canvas.height);
 
         // reset position
-        if (oneOrZero() > canvas.height / canvas.width) {
+        if (oneOrZero() > ratio) {
             this.xPos = -this.radius;
             this.yPos = randRange(0, canvas.height);
         } else {
@@ -104,6 +105,7 @@ function render() {
     canvas.height = window.innerHeight;
     cursorRadius = 0.25 * canvas.height;
     borderWidth = 0.01 * canvas.width;
+    ratio = Math.abs(canvas.height > canvas.width ? canvas.width / canvas.height : canvas.height / canvas.width);
     window.addEventListener('resize', render, true);
 }
 

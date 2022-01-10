@@ -34,6 +34,7 @@ function Clock() {
     } else {
         abbreviation.innerHTML = 'AM';
     }
+    
     if (currentHour < 10) {
         currentHour = '0' + currentHour;
     }
@@ -64,7 +65,6 @@ function Clock() {
 
 
 // property updates
-
 document.addEventListener("clockEnabled", (v) => {
     running = v.detail.value;
     let visiblity;
